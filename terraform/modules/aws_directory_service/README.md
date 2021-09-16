@@ -1,3 +1,5 @@
+Module for Deploying AWS Directory Service 
+
 ## Requirements
 
 No requirements.
