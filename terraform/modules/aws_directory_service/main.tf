@@ -1,18 +1,18 @@
-resource "random_password" "directory_password" {
+resource "random_password" "this" {
   length  = 15
   special = true
 }
 
 #Creating SSM Parameters
-resource "aws_ssm_parameter" "parameter_directory_password" {
+resource "aws_ssm_parameter" "this" {
   name    = "/MAG/directory/password"
   type    = "SecureString"
-  value   = random_password.directory_password.result
+  value   = random_password.this.result
 }
 # Creating AWS  Directory Service
-resource "aws_directory_service_directory" "main" {
+resource "aws_directory_service_directory" "this" {
   name    = var.domain_name
-  password= random_password.directory_password.result
+  password= random_password.this.result
   edition = var.edition
   type    = var.type
 
