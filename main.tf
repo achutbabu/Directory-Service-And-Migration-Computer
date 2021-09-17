@@ -1,4 +1,5 @@
 module "aws_directory_service" {
+# version     = "1.0"
   source      = "./terraform/modules/aws_directory_service"
   region      = var.region
   domain_name = var.domain_name
