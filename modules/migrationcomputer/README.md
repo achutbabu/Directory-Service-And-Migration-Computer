@@ -49,10 +49,4 @@ No modules.
 |------|-------------|
 | <a name="output_instance_ip"></a> [instance\_ip](#output\_instance\_ip) | n/a |
 | <a name="output_security_groupid"></a> [security\_groupid](#output\_security\_groupid) | n/a |
-~                                                                                                                                                                                                           
-~                                                                                                                                                                                                           
-~                                                                                                                                                                                                           
-~                                                                                                                                                                                                           
-~                                                                                                                                                                                                           
-~                                                                                                                                                                                                           
-~                     
+                                                                                                                                                                                                                                                                                                                                                                                                               
