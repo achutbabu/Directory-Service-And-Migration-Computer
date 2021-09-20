@@ -65,17 +65,17 @@ variable "ingress_rules" {
 variable "ssm_role_name" {
   type         = string
   description  = "the name of ssm role"
-  default      = "ec2-ssm-role"
+  default      = "ec2_ssm_role"
 }
 
 variable "instance_profile_name" { 
   type         = string
   description  = "the name of instance profile"
-  default      = "ec2-ssm-profile"
+  default      = "ec2_ssm_profile"
 }
 
 variable "ssmdocument_name" { 
   type         = string
   description  = "the name of ssmdocument"
-  default      = "ec2-ssmrole-profile"
+  default      = "ec2_ssmrole_profile"
 }
