@@ -13,7 +13,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_aws_directory_service"></a> [aws\_directory\_service](#module\_aws\_directory\_service) | ./terraform/modules/aws_directory_service | n/a |
+| <a name="module_migrationcomputer"></a> [migrationcomputer](#module\_migrationcomputer) | ./modules/migrationcomputer | n/a |
 
 ## Resources
 
@@ -23,18 +23,20 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_domain_name"></a> [domain\_name](#input\_domain\_name) | the domain name of the directory service. | `string` | `"partners.temp"` | no |
-| <a name="input_edition"></a> [edition](#input\_edition) | the edition of the MicrosoftAD  directory service. Standard or Enterprise | `string` | `"Standard"` | no |
-| <a name="input_region"></a> [region](#input\_region) | the region where the infrastructure has to be deployed | `string` | `"us-west-2"` | no |
-| <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | the subnet ids of the active directory service. | `list(string)` | <pre>[<br>  "subnet-5915de13",<br>  "subnet-3fec4547"<br>]</pre> | no |
-| <a name="input_tags"></a> [tags](#input\_tags) | tags to propogate to all supported resources | `string` | `"d-server-00u4h5mwt17wxw"` | no |
-| <a name="input_type"></a> [type](#input\_type) | the type of the  directory service. | `string` | `"MicrosoftAD"` | no |
-| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | the vpc id of the  directory service. | `string` | `"vpc-5f326e27"` | no |
+| <a name="input_ingress_rules"></a> [ingress\_rules](#input\_ingress\_rules) | n/a | <pre>list(object({<br>  from_port    = number<br>  to_port      = number<br>  protocol     = string<br>  cidr_block   = string<br>  description  = string<br>    }))</pre> | <pre>[<br>  {<br>    "cidr_block": "0.0.0.0/0",<br>    "description": "RDP",<br>    "from_port": 3389,<br>    "protocol": "tcp",<br>    "to_port": 3389<br>  },<br>  {<br>    "cidr_block": "0.0.0.0/0",<br>    "description": "winrm",<br>    "from_port": 5985,<br>    "protocol": "tcp",<br>    "to_port": 5986<br>  }<br>]</pre> | no |
+| <a name="input_instance_profile_name"></a> [instance\_profile\_name](#input\_instance\_profile\_name) | the name of instance profile | `string` | `"ec2-ssm-profile"` | no |
+| <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | the  size of instance type | `string` | `"t2.medium"` | no |
+| <a name="input_key_name"></a> [key\_name](#input\_key\_name) | Name of the SSH key to deploy to the Windows server | `string` | `"achutseptber"` | no |
+| <a name="input_region"></a> [region](#input\_region) | the region  where the infrastructure is to be deployed | `string` | `"us-west-2"` | no |
+| <a name="input_security_group_name"></a> [security\_group\_name](#input\_security\_group\_name) | the name of the security group | `string` | `"MAG Security Group For AD Migration"` | no |
+| <a name="input_ssm_role_name"></a> [ssm\_role\_name](#input\_ssm\_role\_name) | the name of ssm role | `string` | `"ec2-ssm-role"` | no |
+| <a name="input_ssmdocument_name"></a> [ssmdocument\_name](#input\_ssmdocument\_name) | the name of ssmdocument | `string` | `"ec2-ssmrole-profile"` | no |
+| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | the id of vpc | `string` | `"vpc-5f326e27"` | no |
+| <a name="input_win_ami"></a> [win\_ami](#input\_win\_ami) | the AMI ID of windows instance | `string` | `"ami-0d94140e38e117dc8"` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_access_url"></a> [access\_url](#output\_access\_url) | n/a |
-| <a name="output_directory_id"></a> [directory\_id](#output\_directory\_id) | n/a |
-| <a name="output_dns_ip_addresses"></a> [dns\_ip\_addresses](#output\_dns\_ip\_addresses) | n/a |
+| <a name="output_instance_ip"></a> [instance\_ip](#output\_instance\_ip) | n/a |
+| <a name="output_security_group_id"></a> [security\_group\_id](#output\_security\_group\_id) | n/a |
