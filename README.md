@@ -26,12 +26,12 @@ No resources.
 | <a name="input_ingress_rules"></a> [ingress\_rules](#input\_ingress\_rules) | n/a | <pre>list(object({<br>  from_port    = number<br>  to_port      = number<br>  protocol     = string<br>  cidr_block   = string<br>  description  = string<br>    }))</pre> | <pre>[<br>  {<br>    "cidr_block": "0.0.0.0/0",<br>    "description": "RDP",<br>    "from_port": 3389,<br>    "protocol": "tcp",<br>    "to_port": 3389<br>  },<br>  {<br>    "cidr_block": "0.0.0.0/0",<br>    "description": "winrm",<br>    "from_port": 5985,<br>    "protocol": "tcp",<br>    "to_port": 5986<br>  }<br>]</pre> | no |
 | <a name="input_instance_profile_name"></a> [instance\_profile\_name](#input\_instance\_profile\_name) | the name of instance profile | `string` | `"ec2-ssm-profile"` | no |
 | <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | the  size of instance type | `string` | `"t2.medium"` | no |
-| <a name="input_key_name"></a> [key\_name](#input\_key\_name) | Name of the SSH key to deploy to the Windows server | `string` | `"achutseptber"` | no |
+| <a name="input_key_name"></a> [key\_name](#input\_key\_name) | Name of the SSH key to deploy to the Windows server | `string` | `"MAG_AD_Migration"` | no |
 | <a name="input_region"></a> [region](#input\_region) | the region  where the infrastructure is to be deployed | `string` | `"us-west-2"` | no |
 | <a name="input_security_group_name"></a> [security\_group\_name](#input\_security\_group\_name) | the name of the security group | `string` | `"MAG Security Group For AD Migration"` | no |
 | <a name="input_ssm_role_name"></a> [ssm\_role\_name](#input\_ssm\_role\_name) | the name of ssm role | `string` | `"ec2-ssm-role"` | no |
 | <a name="input_ssmdocument_name"></a> [ssmdocument\_name](#input\_ssmdocument\_name) | the name of ssmdocument | `string` | `"ec2-ssmrole-profile"` | no |
-| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | the id of vpc | `string` | `"vpc-5f326e27"` | no |
+| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | the id of vpc | `string` | `"vpc-062398958da5b533d"` | no |
 | <a name="input_win_ami"></a> [win\_ami](#input\_win\_ami) | the AMI ID of windows instance | `string` | `"ami-0d94140e38e117dc8"` | no |
 
 ## Outputs
