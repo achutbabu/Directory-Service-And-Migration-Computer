@@ -56,7 +56,49 @@ variable "ingress_rules" {
    to_port     = 5986
    protocol    = "tcp"
    cidr_block  = "0.0.0.0/0"
-   description = "winrm"
+   description = "Powershell HTTPS"
+        },
+      {
+   from_port   = 53
+   to_port     = 53
+   protocol    = "tcp"
+   cidr_block  = "0.0.0.0/0"
+   description = "DNS"
+        },
+     {
+   from_port   = 88
+   to_port     = 88
+   protocol    = "tcp"
+   cidr_block  = "0.0.0.0/0"
+   description = "Kerberos authentication"
+        },
+      {
+   from_port   = 389
+   to_port     = 389
+   protocol    = "tcp"
+   cidr_block  = "0.0.0.0/0"
+   description = "LDAP"
+        },
+       {
+   from_port   = 445
+   to_port     = 445
+   protocol    = "tcp"
+   cidr_block  = "0.0.0.0/0"
+   description = "SMB"
+        },
+       {
+   from_port   = 636
+   to_port     = 636
+   protocol    = "tcp"
+   cidr_block  = "0.0.0.0/0"
+   description = "LDAPS"
+        },
+       {
+   from_port   = 9389
+   to_port     = 9389
+   protocol    = "tcp"
+   cidr_block  = "0.0.0.0/0"
+   description = "ADWS"
         },
     ]
 
