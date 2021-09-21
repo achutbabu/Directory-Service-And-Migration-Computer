@@ -26,7 +26,7 @@ No resources.
 | <a name="input_domain_name"></a> [domain\_name](#input\_domain\_name) | the domain name of the directory service. | `string` | `"partners.temp"` | no |
 | <a name="input_edition"></a> [edition](#input\_edition) | the edition of the MicrosoftAD  directory service. Standard or Enterprise | `string` | `"Standard"` | no |
 | <a name="input_region"></a> [region](#input\_region) | the region where the infrastructure has to be deployed | `string` | `"us-west-2"` | no |
-| <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | the subnet ids of the active directory service. | `list(string)` | <pre>[<br>  "subnet-5915de13",<br>  "subnet-3fec4547"<br>]</pre> | no |
+| <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | the subnet ids of the active directory service. | `list(string)` | <pre>[<br>  "subnet-0f176349a1ccf0a82", "subnet-08acc1c8fbe1c555b"<br>]</pre> | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | tags to propogate to all supported resources | `string` | `"d-server-00u4h5mwt17wxw"` | no |
 | <a name="input_type"></a> [type](#input\_type) | the type of the  directory service. | `string` | `"MicrosoftAD"` | no |
 | <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | the vpc id of the  directory service. | `string` | `"vpc-062398958da5b533d"` | no |
