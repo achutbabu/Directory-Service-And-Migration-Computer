@@ -25,13 +25,13 @@ variable "edition" {
 variable "vpc_id" {
   type        = string
   description = "the vpc id of the  directory service."
-  default     = "vpc-5f326e27"
+  default     = "vpc-062398958da5b533d"
 }
 
 variable "subnet_ids" {
   type        = list(string)
   description = "the subnet ids of the active directory service."
-  default     = ["subnet-5915de13", "subnet-3fec4547"]
+  default     = ["subnet-0f176349a1ccf0a82", "subnet-08acc1c8fbe1c555b"]
 }
 variable "tags" {
   type        = string
