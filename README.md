@@ -29,7 +29,7 @@ No resources.
 | <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | the subnet ids of the active directory service. | `list(string)` | <pre>[<br>  "subnet-5915de13",<br>  "subnet-3fec4547"<br>]</pre> | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | tags to propogate to all supported resources | `string` | `"d-server-00u4h5mwt17wxw"` | no |
 | <a name="input_type"></a> [type](#input\_type) | the type of the  directory service. | `string` | `"MicrosoftAD"` | no |
-| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | the vpc id of the  directory service. | `string` | `"vpc-5f326e27"` | no |
+| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | the vpc id of the  directory service. | `string` | `"vpc-062398958da5b533d"` | no |
 
 ## Outputs
 
