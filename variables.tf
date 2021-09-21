@@ -20,13 +20,13 @@ variable "instance_type" {
 variable "vpc_id" {
   type         = string
   description  = "the id of vpc"
-  default      = "vpc-5f326e27"
+  default      = "vpc-062398958da5b533d"
 }
 
 variable "key_name" {
   type         = string   
   description  = "Name of the SSH key to deploy to the Windows server"
-  default      = "achutseptber"
+  default      = "MAG_AD_Migration"
 }
 
 variable "security_group_name" {
